@@ -1,0 +1,60 @@
+.main {
+  display: flex;
+  min-height: 100vh;
+
+  .img {
+    flex: 1;
+    display: none;
+  }
+
+  .form-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    .img {
+      display: block;
+      background-color: var(--clr-text);
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .intro {
+        background-color: rgba(0, 0, 0, 0.3);
+        color: var(--clr-white);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        right: 25px;
+        z-index: 10;
+        bottom: 25px;
+        padding: 2rem;
+        max-width: 400px;
+        border-radius: 10px;
+        h2 {
+          margin-bottom: 1rem;
+        }
+        p {
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}

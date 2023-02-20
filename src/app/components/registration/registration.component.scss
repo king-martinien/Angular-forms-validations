@@ -1,0 +1,26 @@
+.registration-form {
+  padding: 1rem 2rem;
+  max-width: 400px;
+  margin: 0 auto;
+
+  h1,
+  p {
+    text-align: center;
+  }
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+  h1 + p {
+    margin-bottom: 1.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .terms {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,92 @@
+// .container {
+//   width: 90%;
+//   margin: 0 auto;
+//   max-width: 1024px;
+// }
+
+.entry {
+  margin-bottom: 1rem;
+
+  .error-message {
+    color: var(--clr-danger);
+    font-size: 12px;
+    font-style: italic;
+  }
+}
+
+.entry-field {
+  position: relative;
+  margin-bottom: 0.2rem;
+
+  &.error {
+    input {
+      border-color: var(--clr-danger);
+      outline-color: var(--clr-danger);
+    }
+    svg {
+      fill: var(--clr-danger);
+    }
+  }
+
+  &-ic {
+    input {
+      padding-left: 38px;
+      line-height: 2;
+    }
+
+    label {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10px;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  input {
+    width: 100%;
+  }
+}
+
+.btn {
+  padding-inline: 1rem;
+  position: relative;
+
+  &-primary {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    border: none;
+  }
+}
+
+.clr-primary {
+  color: var(--clr-primary);
+}
+
+// Spinner style
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--clr-primary);
+  border-radius: 50%;
+  border-top-color: var(--clr-white);
+  animation: spin 1s ease-in-out infinite;
+
+  @keyframes spin {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+}
